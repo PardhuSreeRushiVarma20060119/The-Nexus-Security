@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme - Enterprise Grade */
+  --background: #f3f4f6;
+  --card-background: #ffffff;
+  --primary: #000000;
+  --secondary: #2600ff;
+  --accent: #3b82f6;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --border: #e5e7eb;
+  --chart-primary: #0f172a;
+  --chart-secondary: #e2e8f0;
+  --yellow: #ffee00;
+  --success: #11ff00;
+  --warning: #d97706;
+  --error: #dc2626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark theme - Professional Dark */
+    --background: #0f172a;
+    --card-background: #1e293b;
+    --primary: #e2e8f0;
+    --secondary: #00039f;
+    --accent: #3b82f6;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border: #334155;
+    --chart-primary: #e2e8f0;
+    --chart-secondary: #1e293b;
+    --success: #107a04;
+    --warning: #8e5b02;
+    --error: #7c0202;
+  }
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Base styles */
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Card and container styles */
+.card {
+  @apply bg-[var(--card-background)] rounded-lg border border-[var(--border)] shadow-sm;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-[var(--primary)] text-white hover:opacity-90;
+}
+
+.btn-secondary {
+  @apply bg-[var(--card-background)] text-[var(--text-primary)] border border-[var(--border)] 
+         hover:border-[var(--text-secondary)];
+}
+
+/* Input styles */
+.input {
+  @apply bg-[var(--card-background)] border border-[var(--border)] rounded-md px-3 py-2
+         focus:outline-none focus:ring-1 focus:ring-[var(--accent)] focus:border-[var(--accent)]
+         text-[var(--text-primary)] placeholder-[var(--text-secondary)];
+}
