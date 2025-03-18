@@ -2,7 +2,7 @@
 
 A comprehensive security platform that combines Open Source Intelligence (OSINT) tools, system monitoring, and security event management in a modern, user-friendly interface.
 
-![Nexus Security Platform](public/logo.png)
+![Nexus Security Platform](public/Nexus.png)
 
 ## Features
 
