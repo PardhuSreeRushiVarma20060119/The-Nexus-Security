@@ -107,20 +107,149 @@ nexus/
 ├── src/
 │   ├── app/                    # Next.js app router pages
 │   │   ├── admin/             # Admin dashboard pages
+│   │   │   ├── config/        # System configuration
+│   │   │   ├── database/      # Database management
+│   │   │   ├── health/        # System health monitoring
+│   │   │   ├── security/      # Security settings
+│   │   │   └── users/         # User management
 │   │   ├── api/               # API routes
+│   │   │   ├── admin/         # Admin API endpoints
+│   │   │   ├── auth/          # Authentication endpoints
+│   │   │   ├── network/       # Network scanning endpoints
+│   │   │   ├── osint/         # OSINT tool endpoints
+│   │   │   ├── security/      # Security-related endpoints
+│   │   │   └── settings/      # System settings endpoints
 │   │   ├── auth/              # Authentication pages
-│   │   └── osint/             # OSINT tool pages
+│   │   │   ├── login/         # Login page
+│   │   │   └── register/      # Registration page
+│   │   ├── dashboard/         # User dashboard
+│   │   │   ├── layout.tsx     # Dashboard layout
+│   │   │   ├── page.tsx       # Main dashboard page
+│   │   │   └── security/      # Security dashboard
+│   │   ├── network/           # Network management
+│   │   ├── osint/             # OSINT tools
+│   │   ├── profile/           # User profile
+│   │   ├── reports/           # Security reports
+│   │   ├── security/          # Security features
+│   │   │   ├── analytics/     # Security analytics
+│   │   │   └── tools/         # Security tools
+│   │   ├── settings/          # User settings
+│   │   │   └── security/      # Security settings
+│   │   └── system/            # System management
 │   ├── components/            # React components
-│   │   ├── osint/            # OSINT-specific components
-│   │   ├── security/         # Security-related components
-│   │   └── ui/               # Reusable UI components
+│   │   ├── admin/            # Admin components
+│   │   │   ├── AdminLayout.tsx
+│   │   │   ├── AdminSection.tsx
+│   │   │   └── AdminSidebar.tsx
+│   │   ├── auth/             # Authentication components
+│   │   │   ├── LoginForm.tsx
+│   │   │   ├── LogoutButton.tsx
+│   │   │   └── RegisterForm.tsx
+│   │   ├── dashboard/        # Dashboard components
+│   │   │   ├── DashboardContent.tsx
+│   │   │   ├── NetworkStatus.tsx
+│   │   │   ├── RecentScans.tsx
+│   │   │   ├── RecentThreats.tsx
+│   │   │   ├── SecurityScore.tsx
+│   │   │   └── SystemHealth.tsx
+│   │   ├── layout/           # Layout components
+│   │   │   ├── Header.tsx
+│   │   │   ├── MainLayout.tsx
+│   │   │   ├── PageContainer.tsx
+│   │   │   ├── PageTransition.tsx
+│   │   │   ├── SearchBar.tsx
+│   │   │   └── Sidebar.tsx
+│   │   ├── network/          # Network components
+│   │   │   ├── NetworkMap.tsx
+│   │   │   ├── NetworkScanner.tsx
+│   │   │   ├── ScanControls.tsx
+│   │   │   ├── ScanResults.tsx
+│   │   │   └── VulnerabilityReport.tsx
+│   │   ├── osint/            # OSINT components
+│   │   │   ├── OsintClient.tsx
+│   │   │   ├── OsintDashboard.tsx
+│   │   │   ├── OsintResults.tsx
+│   │   │   ├── OsintTools.tsx
+│   │   │   ├── ShodanDashboard.tsx
+│   │   │   └── WhoisFinder.tsx
+│   │   ├── profile/          # Profile components
+│   │   │   ├── ProfileHeader.tsx
+│   │   │   └── RecentActivity.tsx
+│   │   ├── reports/          # Report components
+│   │   │   ├── ReportFilters.tsx
+│   │   │   └── ReportsList.tsx
+│   │   ├── security/         # Security components
+│   │   │   └── SecurityTimeline.tsx
+│   │   ├── settings/         # Settings components
+│   │   │   ├── ProfileSettings.tsx
+│   │   │   └── SecuritySettings.tsx
+│   │   ├── system/           # System components
+│   │   │   ├── AntivirusStatus.tsx
+│   │   │   ├── FirewallStatus.tsx
+│   │   │   ├── ProcessMonitor.tsx
+│   │   │   ├── ResourceUsage.tsx
+│   │   │   ├── SystemAlerts.tsx
+│   │   │   ├── SystemPerformance.tsx
+│   │   │   └── SystemUpdates.tsx
+│   │   └── ui/               # UI components
+│   │       ├── Accordion.tsx
+│   │       ├── Alert.tsx
+│   │       ├── Avatar.tsx
+│   │       ├── Badge.tsx
+│   │       ├── Button.tsx
+│   │       ├── Card.tsx
+│   │       ├── Carousel.tsx
+│   │       ├── DatePicker.tsx
+│   │       ├── Dropdown.tsx
+│   │       ├── FilterDropdown.tsx
+│   │       ├── Glassmorphic.tsx
+│   │       ├── Grid.tsx
+│   │       ├── Input.tsx
+│   │       ├── MetricCard.tsx
+│   │       ├── Modal.tsx
+│   │       ├── Pagination.tsx
+│   │       ├── ProgressBar.tsx
+│   │       ├── SearchInput.tsx
+│   │       ├── Section.tsx
+│   │       ├── Select.tsx
+│   │       ├── Skeleton.tsx
+│   │       ├── Spinner.tsx
+│   │       ├── Table.tsx
+│   │       ├── Tabs.tsx
+│   │       ├── Toast.tsx
+│   │       └── Tooltip.tsx
 │   ├── lib/                   # Utility functions and services
-│   │   ├── prisma.ts         # Prisma client
-│   │   └── services/         # Business logic services
+│   │   ├── services/         # Business logic services
+│   │   │   ├── aiInsights.ts
+│   │   │   ├── autoScan.ts
+│   │   │   ├── networkMonitor.ts
+│   │   │   ├── nmapService.ts
+│   │   │   ├── notifications.ts
+│   │   │   ├── osintLogService.ts
+│   │   │   ├── osintService.ts
+│   │   │   ├── shodanService.ts
+│   │   │   └── systemScan.ts
+│   │   └── utils/            # Utility functions
+│   │       ├── nmapParser.ts
+│   │       ├── osintStats.ts
+│   │       └── reportGenerator.ts
 │   └── types/                # TypeScript type definitions
+│       ├── next-auth.d.ts
+│       ├── node-virustotal.d.ts
+│       ├── prisma.d.ts
+│       ├── reports.ts
+│       └── whois-json.d.ts
 ├── prisma/                   # Database schema and migrations
+│   ├── migrations/          # Database migrations
+│   └── schema.prisma        # Database schema
 ├── public/                   # Static assets
-└── styles/                   # Global styles
+├── scripts/                 # Utility scripts
+│   └── create-admin.ts      # Admin user creation script
+├── uploads/                 # File uploads directory
+├── .env.example            # Environment variables template
+├── package.json            # Project dependencies
+├── tsconfig.json           # TypeScript configuration
+└── tailwind.config.js      # Tailwind CSS configuration
 ```
 
 ## API Documentation
