@@ -328,7 +328,7 @@ For support, email support@nexussecurity.com or join our Slack channel.
 
 ## Screenshots
 
-[Add screenshots of key features here]
+refer SS section for vuewscreenshots.
 
 ## Changelog
 
