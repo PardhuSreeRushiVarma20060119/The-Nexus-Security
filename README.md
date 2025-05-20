@@ -19,11 +19,13 @@
 - **Performance Analytics**: Historical data and trends
 - **Alert System**: Proactive notifications for system issues
 
-### 👥 User Management
+### 👥 User & Database Management
 - **Role-based Access**: Admin and user roles
 - **Activity Tracking**: User action logging
 - **Session Management**: Secure authentication
 - **Profile Management**: User settings and preferences
+- **Prisma ORM Integration**: Integrated Database Management and ORM Tool
+- **Postgresql Database**: PostgreSQL Database
 
 ### 🔒 Security Features
 - **Event Logging**: Comprehensive security event tracking
