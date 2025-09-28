@@ -1,7 +1,10 @@
 # *Nexus Security Command Center Platform* (Archived)
 ![Nexus Security Command Center Logo v1 0](https://github.com/user-attachments/assets/2474a96f-d101-434f-bc16-bee88540f234)
 
+---
 *"Security isn't just about defense—it's about intelligence. Nexus Security provides the insights, tools, and control you need to stay ahead of emerging threats."*
+
+---
 
 ## Features
 
