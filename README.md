@@ -164,19 +164,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Shadcn UI](https://ui.shadcn.com/)
 - [Lucide Icons](https://lucide.dev/)
 
-## Support
-
-For support, email pardhusreerushivarma@gmail.com
-
-## Roadmap
-
-- [ ] Add more OSINT tools
-- [ ] Implement real-time collaboration
-- [ ] Add custom report generation
-- [ ] Enhance system monitoring capabilities
-- [ ] Add API key management
-- [ ] Implement team workspaces
-
 ## Screenshots
 
 *Refer ScreenShots for Application Images.*
