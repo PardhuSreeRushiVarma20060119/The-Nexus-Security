@@ -22,19 +22,19 @@ async function main() {
   // Create normal users
   const normalUsers = [
     {
-      email: 'pardhuvarma@nsec.com',
-      name: 'Pardhu Varma',
-      password: 'nspv1109',
+      email: '*************',
+      name: 'user1',
+      password: '**********',
     },
     {
-      email: 'prishavarma@nsec.com',
-      name: 'Prisha Varma',
-      password: 'prishapardhu!123456',
+      email: '***********',
+      name: 'user2',
+      password: '************',
     },
     {
-      email: 'teshii@nsec.com',
-      name: 'Teshii',
-      password: 'teshikaredla0808',
+      email: '*********',
+      name: 'user3',
+      password: '**********',
     },
   ];
 
